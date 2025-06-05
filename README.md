@@ -60,13 +60,27 @@ Here are the final PCB designs:
 
 ---
 
-### 4. The software
+### 4. Cases
 
-I haven't had fund to get the parts yet but there is a tool called [zmk](/zmk-corny-config/) - I will keep the repo private for now since I am just doing it blindly
+Design the case inside ergogen is possible. However, it was a pain in the ass so I made a dirty (or genius?) move by making half of the case in ergogen, the eport it in `jscad` convert to `stl` using the `@jscad/cli@1` package and then put it inside [OnShape](https://cad.onshape.com) then delete the wrong part
+
+Here is the image of the final `stl` file
+
+| Left case                  | Right case                  |
+| -------------------------- | --------------------------- |
+| ![](/assets/left_case.png) | ![](/assets/right_case.png) |
+
+P/s: Im praying that the mounting hole will fit
 
 ---
 
-### 5. BOM
+### 5. The software
+
+I haven't had fund to get the parts yet but there is a tool called [zmk](/zmk-corny-config/) - I will keep the repo private for now since I am just doing it blindly without the physical parts
+
+---
+
+### 6. BOM
 
 AYou can check the BOM in [here](/Corny_BOM.csv). As you can see, the prices look a bit messy—that's the best I could do when converting between VND and USD (inflation is killing me). Only Shopee Vietnam, a Vietnamese e-commerce platform, lists exact prices in VND, which I then converted to USD. All the other retailers charge in USD. Even more frustrating, Typeractive actually charges more in VND than in USD!
 
