@@ -1,0 +1,466 @@
+units:
+  kx: u
+  ky: u
+
+  px: kx + 4
+  py: ky + 4
+
+  cax: ky + 8
+  cay: ky + 8
+
+  screwSize: 1.5
+  standoffSize: 2.5
+
+points:
+  zones:
+    matrix:
+      anchor:
+        shift: [50, -200]
+      key:
+        padding: ky + 0.5
+        spread: kx + 0.5
+      columns:
+        outer:
+          key.column_net: P20
+          rows:
+            arrow:
+              skip: true
+        pinky:
+          key.stagger: 4
+          key.column_net: P19
+        ring:
+          key.stagger: 10
+          key.column_net: P18
+        middle:
+          key.stagger: 5
+          key.column_net: P15
+        index:
+          key.stagger: -6
+          key.column_net: P14
+          rows:
+            arrow:
+              skip: true
+        inner:
+          key.stagger: -2
+          key.column_net: P16
+          rows:
+            arrow:
+              skip: true
+      rows:
+        arrow:
+          row_net: P6 
+        row0:
+          row_net: P7
+        row1:
+          row_net: P5 
+        row2:
+          row_net: P4
+        row3:
+          row_net: P3
+    thumb_fan:
+      anchor:
+        ref: matrix_index_row0
+        shift: [5, -25]
+        rotate: 10
+      columns:
+        near:
+          key.column_net: P14
+        long:
+          key.width: 1.5kx
+          key.spread: 29
+          key.origin: [-19, -10]
+          key.splay: -20
+          key.column_net: P10
+      rows: 
+        thumbs:
+          row_net: P6
+    brackets:
+      anchor: 
+        ref: matrix_inner_row0
+        shift: [24, -2]
+        rotate: -5    
+      columns: 
+        one: 
+          key.column_net: P10
+      rows: 
+        bracket:
+          row_net: P7
+  mirror: &mirror
+    ref: matrix_inner_row0
+    distance: 100
+
+outlines:
+  raw:
+    - what: rectangle
+      where: true
+      size: [kx, ky]
+  keys:
+    - what: rectangle
+      where: true
+      size: [kx - 0.5, ky - 0.5]
+  board_left:
+    - what: polygon
+      operation: stack
+      fillet: 4
+      points:
+        - ref: matrix_outer_row3
+          shift: [-px/2, py/2]
+        - ref: matrix_pinky_row3
+          shift: [-px/2, py/2]
+        - ref: matrix_ring_row3
+          shift: [-px/2, py/2]
+        - ref: matrix_middle_row3
+          shift: [-px/2, py/2]
+        - ref: matrix_index_row3
+          shift: [0, 0.8py]
+        - ref: matrix_inner_row3
+          shift: [px/2, py/2+2]
+        - ref: matrix_inner_row3
+          shift: [1.65px, py/2+2]
+        - ref: thumb_fan_long_thumbs
+          shift: [px, -py/2]
+        - ref: matrix_pinky_arrow
+          shift: [-px/2, -py/2]
+        - ref: matrix_outer_row0
+          shift: [-px/2, -py/2]
+        - ref: matrix_outer_row1
+          shift: [-px/2, 0]
+        - ref: matrix_outer_row2
+          shift: [-px/2, 0]
+  board_right:
+    - what: polygon
+      operation: stack
+      fillet: 4
+      points:
+        - ref: mirror_matrix_outer_row3
+          shift: [-px/2, py/2]
+        - ref: mirror_matrix_pinky_row3
+          shift: [-px/2, py/2]
+        - ref: mirror_matrix_ring_row3
+          shift: [-px/2, py/2]
+        - ref: mirror_matrix_middle_row3
+          shift: [-px/2, py/2]
+        - ref: mirror_matrix_index_row3
+          shift: [0, 0.8py]
+        - ref: mirror_matrix_inner_row3
+          shift: [px/2, py/2+2]
+        - ref: mirror_matrix_inner_row3
+          shift: [1.65px, py/2+2]
+        - ref: mirror_thumb_fan_long_thumbs
+          shift: [px, -py/2]
+        - ref: mirror_matrix_pinky_arrow
+          shift: [-px/2, -py/2]
+        - ref: mirror_matrix_outer_row0
+          shift: [-px/2, -py/2]
+        - ref: mirror_matrix_outer_row1
+          shift: [-px/2, 0]
+        - ref: mirror_matrix_outer_row2
+          shift: [-px/2, 0]
+  xl_board_left:
+    - what: polygon
+      operation: stack
+      fillet: 4
+      points:
+        - ref: matrix_outer_row3
+          shift: [-cax/2, cay/2]
+        - ref: matrix_pinky_row3
+          shift: [-cax/2, cay/2]
+        - ref: matrix_ring_row3
+          shift: [-cax/2, cay/2]
+        - ref: matrix_middle_row3
+          shift: [-cax/2, cay/2]
+        - ref: matrix_index_row3
+          shift: [0, 0.8cay]
+        - ref: matrix_inner_row3
+          shift: [cax/2, cay/2+2]
+        - ref: matrix_inner_row3
+          shift: [1.65cax-3, cay/2+2]
+        - ref: thumb_fan_long_thumbs
+          shift: [cax-1, -cay/2]
+        - ref: matrix_pinky_arrow
+          shift: [-cax/2, -cay/2]
+        - ref: matrix_outer_row0
+          shift: [-cax/2, -cay/2]
+        - ref: matrix_outer_row1
+          shift: [-cax/2, 0]
+        - ref: matrix_outer_row2
+          shift: [-cax/2, 0]
+  
+  combo:
+    - name: board_left
+    - operation: subtract
+      name: keys
+  mounting: 
+     - what: circle
+       radius: screwSize
+       where: 
+          ref: matrix_outer_row0
+          shift: [0.1px, -0.7py]
+
+     - what: circle
+       radius: screwSize
+       where: 
+          ref: matrix_pinky_row3
+          shift: [0.3py, py/2]
+     
+     - what: circle
+       radius: screwSize
+       where: 
+          ref: thumb_fan_long_thumbs
+          shift: [0.7px, -0.2py]  
+
+     - what: circle
+       radius: screwSize
+       where: 
+          ref: matrix_index_row3
+          shift: [-0.3px, py/2]   
+
+     - what: circle
+       radius: screwSize
+       where: 
+          ref: mirror_matrix_outer_row0
+          shift: [0.1px, -0.7py]
+
+     - what: circle
+       radius: screwSize
+       where: 
+          ref: mirror_matrix_pinky_row3
+          shift: [0.3py, py/2]
+     
+     - what: circle
+       radius: screwSize
+       where: 
+          ref: mirror_thumb_fan_long_thumbs
+          shift: [0.7px, -0.2py]  
+
+     - what: circle
+       radius: screwSize
+       where: 
+          ref: mirror_matrix_index_row3
+          shift: [-0.3px, py/2] 
+
+  standoff: 
+     - what: circle
+       radius: standoffSize
+       where: 
+          ref: matrix_outer_row0
+          shift: [0.1px, -0.7py]
+
+     - what: circle
+       radius: standoffSize
+       where: 
+          ref: matrix_pinky_row3
+          shift: [0.3py, py/2]
+     
+     - what: circle
+       radius: standoffSize
+       where: 
+          ref: thumb_fan_long_thumbs
+          shift: [0.7px, -0.2py]  
+
+     - what: circle
+       radius: standoffSize
+       where: 
+          ref: matrix_index_row3
+          shift: [-0.3px, py/2]   
+
+     - what: circle
+       radius: standoffSize
+       where: 
+          ref: mirror_matrix_outer_row0
+          shift: [0.1px, -0.7py]
+
+     - what: circle
+       radius: standoffSize
+       where: 
+          ref: mirror_matrix_pinky_row3
+          shift: [0.3py, py/2]
+     
+     - what: circle
+       radius: standoffSize
+       where: 
+          ref: mirror_thumb_fan_long_thumbs
+          shift: [0.7px, -0.2py]  
+
+     - what: circle
+       radius: standoffSize
+       where: 
+          ref: mirror_matrix_index_row3
+          shift: [-0.3px, py/2] 
+pcbs:
+  left:
+    template: kicad8
+    outlines:
+      main:
+        outline: board_left
+    footprints:
+      choc_hotswap:
+        what: choc
+        where: /^(matrix|thumb_fan|brackets)_.*/
+        params:
+          keycaps: true
+          reverse: false
+          hotswap: true
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      diode:
+        what: diode
+        where: /^(matrix|thumb_fan|brackets)_.*/
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift: [0, -5]
+      nicenano:
+        what: nice_nano
+        where:
+          ref: matrix_inner_row3
+          shift: [1.1px, -0.4py]
+      powerswitch: 
+        what: power_switch
+        where: 
+          ref: matrix_inner_row1
+          shift: [1.5px, -py/4]
+      bat_plug: 
+        what: battery_plug
+        params:   
+          side: B
+        where: 
+          ref: matrix_inner_row1
+          shift: [px, 0]
+          rotate: 90
+      reset:
+        what: reset
+        where: 
+          ref: matrix_inner_row1
+          shift: [1.5px, py/4]
+          rotate: -90
+      mounting1: 
+        what: mounting_hole
+        where: 
+          ref: matrix_outer_row0
+          shift: [0.1px, -0.7py]
+      mounting2: 
+        what: mounting_hole
+        where: 
+          ref: matrix_pinky_row3
+          shift: [0.3py, py/2]
+      mounting3: 
+        what: mounting_hole
+        where: 
+          ref: thumb_fan_long_thumbs
+          shift: [0.7px, -0.2py]  
+      mounting4: 
+        what: mounting_hole
+        where: 
+          ref: matrix_index_row3
+          shift: [-0.3px, py/2]   
+  right:
+    template: kicad8
+    outlines:
+      main:
+        outline: board_right
+    footprints:
+      choc_hotswap:
+        what: choc
+        where: /^mirror_(matrix|thumb_fan|brackets)_.*/
+        params:
+          keycaps: true
+          reverse: false
+          hotswap: true
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      diode:
+        what: diode
+        where: /^mirror_(matrix|thumb_fan|brackets)_.*/
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift: [0, -5]
+      nicenano:
+        what: nice_nano
+        where:
+          ref: mirror_matrix_inner_row3
+          shift: [1.1px, -0.4py]
+      powerswitch: 
+        what: power_switch
+        where: 
+          ref: mirror_matrix_inner_row1
+          shift: [1.5px, py/4]
+          rotate: 180
+      bat_plug: 
+        what: battery_plug
+        params:   
+          side: B
+        where: 
+          ref: mirror_matrix_inner_row1
+          shift: [px, 0]
+          rotate: 90
+      reset:
+        what: reset
+        where: 
+          ref: mirror_matrix_inner_row1
+          shift: [1.5px, -py/4]
+          rotate: -90
+      mounting1: 
+        what: mounting_hole
+        where: 
+          ref: mirror_matrix_outer_row0
+          shift: [px*0.1, -0.7py]
+      mounting2: 
+        what: mounting_hole
+        where: 
+          ref: mirror_matrix_pinky_row3
+          shift: [px*0.3, py/2]
+      mounting3: 
+        what: mounting_hole
+        where: 
+          ref: mirror_thumb_fan_long_thumbs
+          shift: [0.7px, -0.2py]  
+      mounting4: 
+        what: mounting_hole
+        where: 
+          ref: mirror_matrix_index_row3
+          shift: [-0.3px, py/2]   
+cases: 
+  bottom: 
+    - name: board_left
+      extrude: 1.5
+  xl_bottom: 
+    - name: xl_board_left
+      extrude: 1.5 
+  _outer_wall:
+    - name: xl_board_left
+      extrude: 8.4
+  _inner_wall: 
+    - name: board_left
+      extrude: 8.4
+  _wall: 
+    - what: case
+      name: _outer_wall
+      operation: add
+    - what: case
+      name: _inner_wall
+      operation: subtract
+  _holes:
+    - name: mounting
+      extrude: 8.4
+  _standoffs:
+    - name: standoff
+      extrude: 8.4
+
+  left_case:
+    - what: case
+      name: _standoffs
+      operation: add
+    - what: case
+      name: _holes
+      operation: subtract
+    - what: case
+      name: xl_bottom
+      operation: add
+    - what: case
+      name: _wall
+      operation: add
+
