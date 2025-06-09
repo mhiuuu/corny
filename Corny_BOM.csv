@@ -7,20 +7,20 @@ No. ,Parts ,Unit cost (USD),Unit cost (VND),Quantity,Retailer,Shipping + Tax (US
 5,Battery jack,1.04,"27,000",1,Typeractive,Free,Free,1.04,27000,https://typeractive.xyz/products/battery-jack?_pos=2&_psq=bat&_ss=e&_v=1.0,
 6,Machine Sockets and Pins,6.61,"172,000",2,Typeractive,Free,Free,13.22,344000,https://typeractive.xyz/products/machine-sockets-and-pins?variant=45741664469223,
 7,Kailh Hotswap Sockets (MX),1.54,"40,000",6,Typeractive,Free,Free,9.24,240000,https://typeractive.xyz/products/hotswap-sockets?_pos=1&_psq=hot&_ss=e&_v=1.0,
-8,PCBs,10.7,"278,960",2,JLCPCB,11.32,"295,429",32.72,"853,349",https://jlcpcb.com,
+8,PCBs,10.7,"278,960",2,JLCPCB,12.47,"324,470",33.87,"882,390",https://jlcpcb.com,
 9,Battery ,1.53,"39,820",2,Shopee Vietnam,0.39,"10,000",3.45,"89,640",https://shopee.vn/Ehbqna-103450-Pin-s%E1%BA%A1c-lithium-polymer-lipo-3.7V-2000MAH-m%E1%BB%9Bi-i.240549284.26978776277?sp_atk=05b7ba61-e00c-4b50-957d-6faa2f0e17b5&xptdk=05b7ba61-e00c-4b50-957d-6faa2f0e17b5,
-TOTAL COST,,,,,,,,118.19,3077989,,
+TOTAL COST,,,,,,,,119.34,3107030,,
 Hardware,,,,,,,,,,,
 No. ,Parts ,Unit cost,Unit cost (VND),Quantity,Retailer,Shipping + Tax (USD),Shipping + Tax (VND),Total cost (USD),Total cost (VND),Source,Note
 1,Akko Rosewood ,0.29,"7,499",60,Shopee Vietnam,0.64,"16,500",18.04,"466,440",https://shopee.vn/Switch-Akko-Cream-V3-Pro-Yellow-Blue-Piano-Silent-Fairy-Linear-Penguin-Tactile-Switch-Akko-Cream-Yellow-Blue-DoDo-Gear-i.665488736.23277505182?xptdk=5d8c6d42-8fd7-4eb1-abab-defb630a23ef,
 2,Keycaps ,0.38,"9,900",58,Shopee Vietnam,0.71,"18,300",22.75,"592,500",https://shopee.vn/-Cherry-Keycap-Blank-1u-Trong-Su%E1%BB%91t-N%C3%BAt-Keycap-L%E1%BA%BB-Trong-Su%E1%BB%91t-Cho-B%C3%A0n-Ph%C3%ADm-C%C6%A1-Switch-Tester-YMDK-Cherry-Profile-i.250643057.21084233969?sp_atk=5da32bc9-29da-4c23-a1d6-5834020310b1&xptdk=5da32bc9-29da-4c23-a1d6-5834020310b1,
 3,Solder,2.49,"65,000",1,Shopee Vietnam,0.64,"16,500",3.13,"81,500",https://shopee.vn/Thi%E1%BA%BFc-H%C3%A0n-63-37-SN63-Flux-1.8-Cu%E1%BB%99n-50G-i.27117857.29208587865,
 4,Soldering station,N/A,,,,,,,,,Owned
-5,Cases,2.76,"71,956",2,JLCPCB,Free,Free,5.52,143912,https://jlcpcb.com,Shipping fee can be included with the PCBs
+5,3D Printed case,13.78,"358,556",1,JLCPCB,Free,Free,13.78,"358,556",https://jlcpcb.com,Shipping fee can be included with the PCBs
 6,Tenting feet,2.45,"63,800",2,Shopee Vietnam,0.58,"15,000",4.9,"142,600",https://shopee.vn/Mini-Di-%C4%90%E1%BB%99ng-H%E1%BB%A3p-Kim-K%E1%BA%BDm-Laptop-%C4%90%E1%BB%A9ng-B%C3%A0n-Ph%C3%ADm-M%C3%A1y-T%C3%ADnh-Ch%C3%A2n-Gi%C3%A1-%C4%90%E1%BB%A1-Cho-Macbook-Air-Huawei-Xiaomi-Notebook-C%C3%B3-Th%E1%BB%83-G%E1%BA%ADp-L%E1%BA%A1i-%C4%90%E1%BB%83-B%C3%A0n-%C4%90%E1%BB%A9ng-i.196261835.26757041641?sp_atk=357ebaeb-0b03-477a-85da-ad89e47e8870&xptdk=357ebaeb-0b03-477a-85da-ad89e47e8870,
-TOTAL COST,,,,,,,,54.34,"1,426,952",,
+TOTAL COST,,,,,,,,62.6,"1,641,596",,
 TOTAL COST,,,,,,,,,,,
 ,,VND,USD,,,,,,,,
-1,Electronics,"3,077,989",118.19,,,,,,,,
-2,Hardware,"1,426,952",54.34,,,,,,,,
-,TOTAL,"4,504,941",172.53,,,,,,,,
+1,Electronics,"3,107,030",119.34,,,,,,,,
+2,Hardware,"1,641,596",62.6,,,,,,,,
+,TOTAL,"4,748,626",181.94,,,,,,,,

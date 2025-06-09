@@ -190,6 +190,7 @@ outlines:
     - name: board_left
     - operation: subtract
       name: keys
+
   mounting: 
      - what: circle
        radius: screwSize
