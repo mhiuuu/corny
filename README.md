@@ -58,7 +58,7 @@ Here are the final PCB designs:
 
 | Left Plate                  | Right Plate                  |
 | --------------------------- | ---------------------------- |
-| ![](/assets/left_plate.png) | ![](/assets/right_plate.png) |
+| ![let_plate](/assets/left_plate.png) | ![](/assets/right_plate.png) |
 
 ---
 
