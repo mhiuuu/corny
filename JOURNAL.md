@@ -4,22 +4,22 @@ This is the journal in the making of Corny. Although I didn't write this daily d
 
 ### 28/05/2025: 1 hour spent
 
-I went by this [video](https://youtu.be/7UXsD7nSfDY?si=z_oIVIhKWSw-gox2) on [Youtube](https://youtube.com) about how to make your own keyboard. Kinda suprised how cool and personalized it was, I decided to use it for my [Hack club High way project](https://highway.hackclub.com/). As a Linux nerd and love how you can DIY everything for your own, I dived into the world of keyboards.
+I went by this [video](https://youtu.be/7UXsD7nSfDY?si=z_oIVIhKWSw-gox2) on [YouTube](https://youtube.com) about how to make your own keyboard. Kinda suprised how cool and personalized it was, I decided to use it for my [Hack club High way project](https://highway.hackclub.com/). As a Linux nerd and love how you can DIY everything for your own, I dived into the world of keyboards.
 
-It was the first day so I just check over some resources for the project. Highly recommended you take a look over the link `Christian Selig` put under his video as it helped me a lot the days after:
+It was the first day so I just checked over some resources for the project. Highly recommended you take a look at the link `Christian Selig` put under his video as it helped me a lot the days after:
 
-1. Parst list: https://christianselig.com/2024/07/caldera-keyboard/
+1. Parts list: https://christianselig.com/2024/07/caldera-keyboard/
 2. The files required to create the keyboard: https://github.com/christianselig/caldera-keyboard
-3. Flatfootfox tutorial (Highly recommended, everything in here was follow along this tutorial): https://flatfootfox.com/ergogen-introduction/
+3. Flatfootfox tutorial (Highly recommended, everything in here was followed along this tutorial): https://flatfootfox.com/ergogen-introduction/
 
-Furthermore, I also watched this [video](https://www.youtube.com/watch?v=7LyziNdFlew) understand the simple concept of a keyboard: How matrix works, how you can use diodes to predict the signal, how you can use ergogen to get the basic plate outline, ... etc
+Furthermore, I also watched this [video](https://www.youtube.com/watch?v=7LyziNdFlew) to understand the simple concept of a keyboard: How the keyboard matrix works, how you can use diodes to predict the signal, how you can use ergogen to get the basic plate outline, ... etc
 
 ---
 
-### 29/05/2025: 1 hours spent
+### 29/05/2025: 1 hour spent
 
-First, I followed the `Flatfootfox` tutorial to understad and create simple board as the `Ergogen` docs is very poor written.
-However, I skiped the most important part `Unit` because I didn't really understand it that much. Also quite struggle with the whole `points` thing so I decided to use the default config by `Ergogen`
+First, I followed the `Flatfootfox` tutorial to understad and create a simple board as the `Ergogen` docs is very poor written.
+However, I skipped the most important part `Unit` because I didn't really understand it that much. Also quite struggle with the whole `points` thing so I decided to use the default config by `Ergogen`
 
 | Raw                      | Keys                               |
 | ------------------------ | ---------------------------------- |
@@ -49,7 +49,7 @@ This was really a pain in the ass because it took me a while to figure out where
 
 ![](/assets/arrow.png)
 
-This 3 keys allowed me to have a much cleaner board with only 3 keys still being abandoned `FN` and the 2 curly braces which were solved by adding 2 more keys each next to the inner row before I decided to remove the `CAPSLOCK` to make space for the `FN` - who use `CAPSLOCK` btw. the upper key of the 2 keys I just added was also removed because the board looked nice now
+This 3 keys allowed me to have a much cleaner board with only 3 keys still being abandoned `FN` and the 2 curly braces which were solved by adding 2 more keys each next to the inner row before I decided to remove the `CAPSLOCK` to make space for the `FN` - who use `CAPSLOCK` btw. The upper key of the 2 keys I just added was also removed because the board looked nice now
 
 ![](/assets/final.png)
 
@@ -65,25 +65,25 @@ The layout was done and now come to the hardest part in my opinion. Adding the e
 
 It was very time consuming and boring task.
 
-I started with defining the matrix for the keyboard (You have to add the `MCU` of your keyboard and check the pins before specify which key goes to pin no ...). During working on this I also figured that you have to create the layout for you `MCU` also
+I started with defining the matrix for the keyboard (You have to add the `MCU` of your keyboard and check the pins before specify which key goes to pin no ...). While working on this I also figured that you have to create the layout for you `MCU` also
 
 ![](/assets/first_pcb.png)
 
 So what I added while doing this:
 
 1. MCU - nice!nano
-2. The powerswitch
+2. The power switch
 3. The reset switch
-4. The battery swich
-5. Headphone jack to connect 2 side
+4. The battery switch
+5. Headphone jack to connect 2 sides
 
-And yes you didn't hear it wrong. Doing all of this took me 4 hours of modify the config + install the file + take a look if everything is fine + start tracing some of the important components to make sure I can route them perfectly. It did drive me crazy at some point
+And yes you didn't hear it wrong. Doing all of this took me 4 hours of modifying the config + installing the file + taking a look if everything is fine + starting to trace some of the important components to make sure I can route them perfectly. It did drive me crazy at some point
 
 ---
 
-### 01/06/2025: 1 hours spent
+### 01/06/2025: 1 hour spent
 
-I asked people on Discord to help me check the connection and got some really good advices.
+I asked people on Discord to help me check the connection and got some really good advice.
 
 ![alt text](/assets/advice.png) - yes I almost burnt my keyboard alive just by wanting to connect them using the headphone jack
 
@@ -103,13 +103,13 @@ The left side had the same appearance but it was a great start when I had some b
 I started redo everything on the PCBs and had a pretty neat appearance now.
 I added some padding to the keyboard outline so my traces have more spacing.
 
-But after that I realized I made the dumbest mistake a human ever could: In the config file, instead of matching the thumb keys with `P10` pin, I left them as `Pten` at the lastest refractor without fixing which means I have to redo everything again =(((. The power switch was also kinda off when place on the outside of the board so I had to move it back a bit (I just do it inside `KiCAD` without edit the config lol)
+But after that I realized I made the dumbest mistake a human ever could: In the config file, instead of matching the thumb keys with `P10` pin, I left them as `Pten` at the lastest refractor without fixing which means I have to redo everything again =(((. The power switch was also kinda off when placed on the outside of the boar,d so I had to move it back a bit (I just do it inside `KiCAD` without edit the config lol)
 
 > Disclaimer: I did fix the config later
 
 ![](/assets/left_plate.png)
 
-But after that everythign was really nice and I finshed the right plate beautifully
+But after that everything was really nice and I finished the right plate beautifully
 
 ---
 
@@ -123,23 +123,23 @@ I tried my best tweaking, figuring things out but this is the best I could get.
 So I decided to convert it from `.jscad` to `.stl` then import it inside OnShape and flip the board around, delete the unused parts the make the other case.
 
 After that I imported everything into `JLCPCB` to get the bills.
-I also started finiding the suitable parts and converting them between VND and USD to make the BOM file
+I also started finding the suitable parts and converting them between VND and USD to make the BOM file
 
 ---
 
 ### 05/06/2025:
 
-I submitted the project to hack club and waiting for the result
+I submitted the project to hack club and am waiting for the result
 
 ---
 
 ### 06/06/205:
 
-Acon said he need the `.step` file so I convert the `.stl` to `.step` and added some image to the PCBs
+Acon said he needed the `.step` file so I converted the `.stl` to `.step` and added some images to the PCBs
 
 ---
 
-### 07/06/2025: 2 hours
+### 07/06/2025: 2 hours spent 
 
 The project is in pending because the case can be generated. So I started drawing the case myselft in OnShape.
 
@@ -153,7 +153,7 @@ So I decided to do that same. It was a long journey of measuring and connecting 
 
 ---
 
-### 08/06/2025
+### 08/06/2025: 2 hours spent
 
 Fnished the leftside and started working on the right side while I found a better way to remove the hole for the velcro strap. Redo it again but this time it was much faster since I can make use of the first hole I created without having to remeasure everything again and again.
 This is the result: a clean 0.3mmx0.3mm hanging bar for the strap
@@ -162,9 +162,9 @@ This is the result: a clean 0.3mmx0.3mm hanging bar for the strap
 
 Next I also found that some keyboards have a wrist rest connected to them but obviously if there are 2 wrist rest pad merged with the keyboard, my velcro idea is useless since nobody want a big ass wrist rest lay on the lap.
 
-So I started to find a way for me to have a detachable wrist rest. There are many ways for you to have something plug in and out but I think magnet is the most usable and fashion way. So I created a simple 5x3x1.2cm pad with some rounding (I wanted it to be tilted be I couldn't do it in Onshape)
+So I started to find a way for me to have a detachable wrist rest. There are many ways for you to have something plug in and out but I think a magnet is the most usable and fashion way. So I created a simple 5x3x1.2cm pad with some rounding (I wanted it to be tilted, be I couldn't do it in Onshape)
 
 ![](/assets/wrist_rest.png)
 
-The wrist rest doesn't really match my first idea but I think it still look nice and great
+The wrist rest doesn't really match my first idea but I think it still looks nice and great
 You can stick them together or just simply use the keyboard without the wrist rest!
